@@ -19,16 +19,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     //1.创建Window
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
     //2.初始化tabBar控制器
-    
-    UITabBarController *tabBarVC = [[CXTabBarViewController alloc]init];
+    CXTabBarViewController *tabBarVC = [[CXTabBarViewController alloc] init];
     
     //3.设置控制器为Window的根控制器
-    
     self.window.rootViewController = tabBarVC;
 
     // 4.显示出来

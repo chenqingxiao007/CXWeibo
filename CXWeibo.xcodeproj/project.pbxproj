@@ -50,8 +50,8 @@
 		9537A68F1C1FEA8F006EEF33 /* CXWeiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CXWeiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9537A6931C1FEA8F006EEF33 /* CXWeiboUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXWeiboUITests.m; sourceTree = "<group>"; };
 		9537A6951C1FEA8F006EEF33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		955374EC1C2006E2004C933D /* CXTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXTabBarViewController.h; sourceTree = "<group>"; };
-		955374ED1C2006E2004C933D /* CXTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXTabBarViewController.m; sourceTree = "<group>"; };
+		955374EC1C2006E2004C933D /* CXTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CXTabBarViewController.h; path = ../../CXTabBarViewController.h; sourceTree = "<group>"; };
+		955374ED1C2006E2004C933D /* CXTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CXTabBarViewController.m; path = ../../CXTabBarViewController.m; sourceTree = "<group>"; };
 		955374EF1C200B39004C933D /* CXWeibo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CXWeibo-Prefix.pch"; sourceTree = "<group>"; };
 		B7428FA0EF650175DEC9AEC6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -124,13 +124,11 @@
 		9537A66D1C1FEA8F006EEF33 /* CXWeibo */ = {
 			isa = PBXGroup;
 			children = (
+				955374F01C2013F7004C933D /* CXKit */,
 				9537A6711C1FEA8F006EEF33 /* AppDelegate.h */,
 				9537A6721C1FEA8F006EEF33 /* AppDelegate.m */,
-				955374EC1C2006E2004C933D /* CXTabBarViewController.h */,
-				955374ED1C2006E2004C933D /* CXTabBarViewController.m */,
 				9537A67A1C1FEA8F006EEF33 /* Assets.xcassets */,
 				9537A67C1C1FEA8F006EEF33 /* LaunchScreen.storyboard */,
-				9537A67F1C1FEA8F006EEF33 /* Info.plist */,
 				9537A66E1C1FEA8F006EEF33 /* Supporting Files */,
 			);
 			path = CXWeibo;
@@ -139,6 +137,7 @@
 		9537A66E1C1FEA8F006EEF33 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9537A67F1C1FEA8F006EEF33 /* Info.plist */,
 				9537A66F1C1FEA8F006EEF33 /* main.m */,
 				955374EF1C200B39004C933D /* CXWeibo-Prefix.pch */,
 			);
@@ -161,6 +160,47 @@
 				9537A6951C1FEA8F006EEF33 /* Info.plist */,
 			);
 			path = CXWeiboUITests;
+			sourceTree = "<group>";
+		};
+		955374F01C2013F7004C933D /* CXKit */ = {
+			isa = PBXGroup;
+			children = (
+				955374F11C2013F7004C933D /* Component */,
+				955374F21C2013F7004C933D /* Controllers */,
+				955374F31C2013F7004C933D /* Networking */,
+				955374F41C2013F7004C933D /* Views */,
+			);
+			path = CXKit;
+			sourceTree = "<group>";
+		};
+		955374F11C2013F7004C933D /* Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		955374F21C2013F7004C933D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				955374EC1C2006E2004C933D /* CXTabBarViewController.h */,
+				955374ED1C2006E2004C933D /* CXTabBarViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		955374F31C2013F7004C933D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		955374F41C2013F7004C933D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
