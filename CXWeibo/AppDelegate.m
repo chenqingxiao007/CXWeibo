@@ -23,6 +23,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     //2.初始化tabBar控制器
+    // 新特性/登陆页面/首页
+    
+    
     CXTabBarViewController *tabBarVC = [[CXTabBarViewController alloc] init];
     
     //3.设置控制器为Window的根控制器
