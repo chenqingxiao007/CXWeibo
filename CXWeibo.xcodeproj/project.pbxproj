@@ -202,6 +202,7 @@
 		9537A6631C1FEA8F006EEF33 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CX;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = chenqingxiao007;
 				TargetAttributes = {
@@ -414,7 +415,7 @@
 				INFOPLIST_FILE = CXWeibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.chenqingxiao007.CXWeibo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chenqingxiao007-CXWeibo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -426,7 +427,7 @@
 				INFOPLIST_FILE = CXWeibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.chenqingxiao007.CXWeibo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chenqingxiao007-CXWeibo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
