@@ -124,6 +124,7 @@
 		9537A66D1C1FEA8F006EEF33 /* CXWeibo */ = {
 			isa = PBXGroup;
 			children = (
+				955374F51C20178B004C933D /* Controllers */,
 				955374F01C2013F7004C933D /* CXKit */,
 				9537A6711C1FEA8F006EEF33 /* AppDelegate.h */,
 				9537A6721C1FEA8F006EEF33 /* AppDelegate.m */,
@@ -201,6 +202,61 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		955374F51C20178B004C933D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				955374F61C20178B004C933D /* Home */,
+				955374F71C20178B004C933D /* Message */,
+				955374F91C20178B004C933D /* Personal */,
+				955374FA1C20178B004C933D /* Search */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		955374F61C20178B004C933D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		955374F71C20178B004C933D /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				955374F81C20178B004C933D /* Home */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		955374F81C20178B004C933D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		955374F91C20178B004C933D /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		955374FA1C20178B004C933D /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				955374FB1C20178B004C933D /* Home */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		955374FB1C20178B004C933D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
