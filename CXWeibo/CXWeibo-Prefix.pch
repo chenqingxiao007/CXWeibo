@@ -11,11 +11,11 @@
 
 #import "UIView+Extension.h"
 
-#define SCREENWIDTH             [UIScreen mainScreen].bounds.size.width
-#define SCREENHEIGHT            [UIScreen mainScreen].bounds.size.height
+#define SCREENWIDTH                       [UIScreen mainScreen].bounds.size.width
+#define SCREENHEIGHT                      [UIScreen mainScreen].bounds.size.height
 
-
-
+#define APPKEY                            @"1599995589"
+#define APPSECRET                         @"b8d6e31776659e3a48487d1cb9235b67"
 
 
 

@@ -42,7 +42,13 @@
 }
 
 - (void)login{
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view.backgroundColor = [UIColor yellowColor];
     
+    
+    // 怎么跳转到这个vc呢???
+    
+
 }
 @end
 
