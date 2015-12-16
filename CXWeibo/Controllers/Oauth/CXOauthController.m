@@ -7,6 +7,7 @@
 //
 
 #import "CXOauthController.h"
+#import "CXNavigationController.h"
 
 @interface CXOauthController ()
 @property (nonatomic, strong) UIButton *loginBtn;
@@ -42,12 +43,15 @@
 }
 
 - (void)login{
-    UIViewController *vc = [[UIViewController alloc] init];
-    vc.view.backgroundColor = [UIColor yellowColor];
+    UIViewController *loginVC = [[UIViewController alloc] init];
+    loginVC.view.backgroundColor = [UIColor yellowColor];
+    loginVC.title = @"登录";
     
-    
-    // 怎么跳转到这个vc呢???
-    
+    // 跳转到登陆界面
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
+    [self presentViewController:nav animated:YES completion:^{
+        
+    }];
 
 }
 @end
