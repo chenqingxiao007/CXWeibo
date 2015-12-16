@@ -47,7 +47,7 @@
     CXLoginViewController *loginVC = [[CXLoginViewController alloc] init];
     
     // 跳转到登陆界面
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
+    CXNavigationController *nav = [[CXNavigationController alloc] initWithRootViewController:loginVC];
     [self presentViewController:nav animated:YES completion:^{
         
     }];
