@@ -10,6 +10,7 @@
 #import "CXAccountTool.h"
 #import "CXNetManager.h"
 #import "CXAccount.h"
+#import "CXProgressHUD.h"
 
 @interface CXHomeViewController ()
 
@@ -41,6 +42,10 @@
         // 设置标题
         NSString *title = [NSString stringWithFormat:@"%@的微博",[responseObject valueForKey:@"name"]];
         self.title = title;
+        [CXProgressHUD showMessage:[responseObject valueForKey:@"description"] durationTime:1.2 completionBlock:^{
+            
+        } inView:self.view];
+        
         
     } failure:^(NSError *error) {
         
