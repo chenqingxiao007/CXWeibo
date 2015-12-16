@@ -8,6 +8,9 @@
 
 #import "CXLoginViewController.h"
 #import "CXProgressHUD.h"
+#import "CXNetManager.h"
+#import "AFNetworking.h"
+
 
 @interface CXLoginViewController ()<UIWebViewDelegate>
 
@@ -74,12 +77,50 @@
 #pragma mark 拦截webView的所有请求
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     //需要做拦截
+    // 1.获得全路径
+    NSString *urlStr = request.URL.absoluteString;
     
+    // 2.查找code=的范围
+    NSRange range = [urlStr rangeOfString:@"code="];
+    
+    if (range.length != 0) {
+        // 跳到“回调地址”，说明已经授权成功
+        NSInteger index = range.location + range.length;
+        // 获取requestToken
+        NSString *requestToken = [urlStr substringFromIndex:index];
+        
+        // 3.换取accessToken
+        [self getAccessToken:requestToken];
+        
+        // 拦截跳转
+        return NO;
+    }
     
     return YES;
 }
 
+- (void)getAccessToken:(NSString *)requestToken{
 
+    // 1.定义参数
+    NSDictionary *params = @{
+                             @"client_id" : APPKEY,
+                             @"client_secret" : APPSECRET,
+                             @"grant_type" : @"authorization_code",
+                             @"redirect_uri" : REDIRECT_URl,
+                             @"code" : requestToken
+                             };
+    
+    
+    // 请求授权的token
+    [CXNetManager postWithUrl:ACCESS_TOKENURL params:params success:^(id responseObject) {
+        NSLog(@"%@",responseObject);
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+
+    
+    
+}
 @end
 
 

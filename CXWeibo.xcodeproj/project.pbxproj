@@ -10,6 +10,7 @@
 		747F273AF959882C7B4C7D7E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7428FA0EF650175DEC9AEC6 /* libPods.a */; };
 		95226E761C213AF5006DC853 /* CXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95226E751C213AF5006DC853 /* CXLoginViewController.m */; };
 		95226E791C21514D006DC853 /* CXProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 95226E781C21514D006DC853 /* CXProgressHUD.m */; };
+		95226E7C1C2157A1006DC853 /* CXNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 95226E7B1C2157A1006DC853 /* CXNetManager.m */; };
 		9537A6701C1FEA8F006EEF33 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9537A66F1C1FEA8F006EEF33 /* main.m */; };
 		9537A6731C1FEA8F006EEF33 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9537A6721C1FEA8F006EEF33 /* AppDelegate.m */; };
 		9537A67B1C1FEA8F006EEF33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9537A67A1C1FEA8F006EEF33 /* Assets.xcassets */; };
@@ -51,6 +52,8 @@
 		95226E751C213AF5006DC853 /* CXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXLoginViewController.m; sourceTree = "<group>"; };
 		95226E771C21514D006DC853 /* CXProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXProgressHUD.h; sourceTree = "<group>"; };
 		95226E781C21514D006DC853 /* CXProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXProgressHUD.m; sourceTree = "<group>"; };
+		95226E7A1C2157A1006DC853 /* CXNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXNetManager.h; sourceTree = "<group>"; };
+		95226E7B1C2157A1006DC853 /* CXNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXNetManager.m; sourceTree = "<group>"; };
 		9537A66B1C1FEA8F006EEF33 /* CXWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CXWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9537A66F1C1FEA8F006EEF33 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9537A6711C1FEA8F006EEF33 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -209,6 +212,8 @@
 			children = (
 				95226E771C21514D006DC853 /* CXProgressHUD.h */,
 				95226E781C21514D006DC853 /* CXProgressHUD.m */,
+				95226E7A1C2157A1006DC853 /* CXNetManager.h */,
+				95226E7B1C2157A1006DC853 /* CXNetManager.m */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -494,6 +499,7 @@
 				95226E791C21514D006DC853 /* CXProgressHUD.m in Sources */,
 				955375071C204841004C933D /* CXMessageViewController.m in Sources */,
 				9537A6701C1FEA8F006EEF33 /* main.m in Sources */,
+				95226E7C1C2157A1006DC853 /* CXNetManager.m in Sources */,
 				9553750D1C2048B9004C933D /* CXSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
