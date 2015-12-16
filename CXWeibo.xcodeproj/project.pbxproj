@@ -11,6 +11,8 @@
 		95226E761C213AF5006DC853 /* CXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95226E751C213AF5006DC853 /* CXLoginViewController.m */; };
 		95226E791C21514D006DC853 /* CXProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 95226E781C21514D006DC853 /* CXProgressHUD.m */; };
 		95226E7C1C2157A1006DC853 /* CXNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 95226E7B1C2157A1006DC853 /* CXNetManager.m */; };
+		95226E831C216B47006DC853 /* CXAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 95226E821C216B47006DC853 /* CXAccountTool.m */; };
+		95226E861C216BF0006DC853 /* CXAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 95226E851C216BF0006DC853 /* CXAccount.m */; };
 		9537A6701C1FEA8F006EEF33 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9537A66F1C1FEA8F006EEF33 /* main.m */; };
 		9537A6731C1FEA8F006EEF33 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9537A6721C1FEA8F006EEF33 /* AppDelegate.m */; };
 		9537A67B1C1FEA8F006EEF33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9537A67A1C1FEA8F006EEF33 /* Assets.xcassets */; };
@@ -48,12 +50,16 @@
 /* Begin PBXFileReference section */
 		5685E7CA60E237B822641285 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		66EC25EE28688D690C05EA31 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		95226E741C213AF5006DC853 /* CXLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXLoginViewController.h; sourceTree = "<group>"; };
-		95226E751C213AF5006DC853 /* CXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXLoginViewController.m; sourceTree = "<group>"; };
+		95226E741C213AF5006DC853 /* CXLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CXLoginViewController.h; path = ../CXLoginViewController.h; sourceTree = "<group>"; };
+		95226E751C213AF5006DC853 /* CXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CXLoginViewController.m; path = ../CXLoginViewController.m; sourceTree = "<group>"; };
 		95226E771C21514D006DC853 /* CXProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXProgressHUD.h; sourceTree = "<group>"; };
 		95226E781C21514D006DC853 /* CXProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXProgressHUD.m; sourceTree = "<group>"; };
 		95226E7A1C2157A1006DC853 /* CXNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXNetManager.h; sourceTree = "<group>"; };
 		95226E7B1C2157A1006DC853 /* CXNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXNetManager.m; sourceTree = "<group>"; };
+		95226E811C216B47006DC853 /* CXAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CXAccountTool.h; path = ../Models/CXAccountTool.h; sourceTree = "<group>"; };
+		95226E821C216B47006DC853 /* CXAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CXAccountTool.m; path = ../Models/CXAccountTool.m; sourceTree = "<group>"; };
+		95226E841C216BF0006DC853 /* CXAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAccount.h; sourceTree = "<group>"; };
+		95226E851C216BF0006DC853 /* CXAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAccount.m; sourceTree = "<group>"; };
 		9537A66B1C1FEA8F006EEF33 /* CXWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CXWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9537A66F1C1FEA8F006EEF33 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9537A6711C1FEA8F006EEF33 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,8 +88,8 @@
 		955375091C20488B004C933D /* CXPersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXPersonalViewController.m; sourceTree = "<group>"; };
 		9553750B1C2048B9004C933D /* CXSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSearchViewController.h; sourceTree = "<group>"; };
 		9553750C1C2048B9004C933D /* CXSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSearchViewController.m; sourceTree = "<group>"; };
-		9553750F1C205215004C933D /* CXOauthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXOauthController.h; sourceTree = "<group>"; };
-		955375101C205215004C933D /* CXOauthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXOauthController.m; sourceTree = "<group>"; };
+		9553750F1C205215004C933D /* CXOauthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CXOauthController.h; path = ../CXOauthController.h; sourceTree = "<group>"; };
+		955375101C205215004C933D /* CXOauthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CXOauthController.m; path = ../CXOauthController.m; sourceTree = "<group>"; };
 		959712341C20FFF5000AF631 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		959712351C20FFF5000AF631 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		B7428FA0EF650175DEC9AEC6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +136,42 @@
 				5685E7CA60E237B822641285 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		95226E7D1C2169E0006DC853 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9553750F1C205215004C933D /* CXOauthController.h */,
+				955375101C205215004C933D /* CXOauthController.m */,
+				95226E741C213AF5006DC853 /* CXLoginViewController.h */,
+				95226E751C213AF5006DC853 /* CXLoginViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		95226E7E1C2169E0006DC853 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				95226E841C216BF0006DC853 /* CXAccount.h */,
+				95226E851C216BF0006DC853 /* CXAccount.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		95226E7F1C2169E0006DC853 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				95226E811C216B47006DC853 /* CXAccountTool.h */,
+				95226E821C216B47006DC853 /* CXAccountTool.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		95226E801C216A01006DC853 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		9537A6621C1FEA8F006EEF33 = {
@@ -298,10 +340,10 @@
 		9553750E1C2051CE004C933D /* Oauth */ = {
 			isa = PBXGroup;
 			children = (
-				9553750F1C205215004C933D /* CXOauthController.h */,
-				955375101C205215004C933D /* CXOauthController.m */,
-				95226E741C213AF5006DC853 /* CXLoginViewController.h */,
-				95226E751C213AF5006DC853 /* CXLoginViewController.m */,
+				95226E801C216A01006DC853 /* Views */,
+				95226E7D1C2169E0006DC853 /* Controllers */,
+				95226E7E1C2169E0006DC853 /* Models */,
+				95226E7F1C2169E0006DC853 /* Tools */,
 			);
 			path = Oauth;
 			sourceTree = "<group>";
@@ -495,11 +537,13 @@
 				95226E761C213AF5006DC853 /* CXLoginViewController.m in Sources */,
 				9553750A1C20488B004C933D /* CXPersonalViewController.m in Sources */,
 				955375011C2047DB004C933D /* CXBaseViewController.m in Sources */,
+				95226E831C216B47006DC853 /* CXAccountTool.m in Sources */,
 				955375041C204821004C933D /* CXHomeViewController.m in Sources */,
 				95226E791C21514D006DC853 /* CXProgressHUD.m in Sources */,
 				955375071C204841004C933D /* CXMessageViewController.m in Sources */,
 				9537A6701C1FEA8F006EEF33 /* main.m in Sources */,
 				95226E7C1C2157A1006DC853 /* CXNetManager.m in Sources */,
+				95226E861C216BF0006DC853 /* CXAccount.m in Sources */,
 				9553750D1C2048B9004C933D /* CXSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,9 @@
 #import "CXProgressHUD.h"
 #import "CXNetManager.h"
 #import "AFNetworking.h"
-
+#import "CXAccount.h"
+#import "CXAccountTool.h"
+#import "CXTabBarViewController.h"
 
 @interface CXLoginViewController ()<UIWebViewDelegate>
 
@@ -113,9 +115,26 @@
     
     // 请求授权的token
     [CXNetManager postWithUrl:ACCESS_TOKENURL params:params success:^(id responseObject) {
-        NSLog(@"%@",responseObject);
+
+        // 1.获取当前账号
+        CXAccount *account = [CXAccount accountWithDic:responseObject];
+        // 2.保存到沙盒
+        [[CXAccountTool shareAccountTool] saveAccount:account];
+        
+        // 3.提示信息
+        [CXProgressHUD hidenForView:self.view];
+        [CXProgressHUD showMessage:@"登录成功" durationTime:1.2 completionBlock:^{
+            // 切换到首页
+            self.view.window.rootViewController = [[CXTabBarViewController alloc] init];
+            
+        } inView:self.view];
+        
     } failure:^(NSError *error) {
+        // 授权失败
         NSLog(@"%@",error);
+//        [CXProgressHUD hidenForView:self.view];
+//        [CXProgressHUD showMessage:@"登录失败" durationTime:1.2 completionBlock:^{
+//        } inView:self.view];
     }];
 
     
