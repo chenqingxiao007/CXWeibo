@@ -7,6 +7,9 @@
 //
 
 #import "CXHomeViewController.h"
+#import "CXAccountTool.h"
+#import "CXNetManager.h"
+#import "CXAccount.h"
 
 @interface CXHomeViewController ()
 
@@ -17,22 +20,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"首页";
+//    self.title = @"首页";
+    
+    [self getUserInfo];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+- (void)getUserInfo{
+// https://api.weibo.com/2/users/show.json
+    
+    CXAccount *account = [CXAccountTool shareAccountTool].account;
+    NSDictionary *params = @{
+                             @"access_token" : account.access_token,
+                             @"uid" :account.uid
+                             };
+    
 
-/*
-#pragma mark - Navigation
+    [CXNetManager getWithUrl:@"https://api.weibo.com/2/users/show.json" params:params success:^(id responseObject) {
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+        // 设置标题
+        NSString *title = [NSString stringWithFormat:@"%@的微博",[responseObject valueForKey:@"name"]];
+        self.title = title;
+        
+    } failure:^(NSError *error) {
+        
+        NSLog(@"%@",error);
+    }];
+    
 }
-*/
 
 @end
+
+
+
+
+
+
+
+
+

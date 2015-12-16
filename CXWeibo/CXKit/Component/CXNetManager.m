@@ -29,7 +29,10 @@
 + (void)getWithUrl:(NSString *)url params:(NSDictionary *)params success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure{
     // 1.获得manager
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    
+    // 让AFN支持@"text/plain" 和 application/json
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+
     [manager GET:url parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
        
         //请求成功以后,给success(block赋值)
@@ -52,8 +55,10 @@
 // post请求
 + (void)postWithUrl:(NSString *)url params:(NSDictionary *)params success:(void (^)(id))success failure:(void (^)(NSError *))failure{
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    // 让AFN支持@"text/plain"
+    // 让AFN支持@"text/plain" 和 application/json
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+
     [manager POST:url parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         
         if (success) {

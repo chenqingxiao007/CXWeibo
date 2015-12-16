@@ -37,7 +37,7 @@
 - (id)initWithCoder:(NSCoder *)decoder
 {
     if (self = [super init]) {
-        self.access_token = [decoder decodeObjectForKey:@"_access_token"];
+        self.access_token = [decoder decodeObjectForKey:@"access_token"];
         self.uid = [decoder decodeObjectForKey:@"uid"];
         self.expires_in = [decoder decodeObjectForKey:@"expires_in"];
         self.remind_in = [decoder decodeObjectForKey:@"remind_in"];
