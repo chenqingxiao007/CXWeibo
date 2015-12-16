@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "CXTabBarViewController.h"
 #import "CXOauthController.h"
+#import "CXAccountTool.h"
 
 @interface AppDelegate ()
 
@@ -23,17 +24,21 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    //2.初始化tabBar控制器
-    // 新特性/登陆页面/首页
-    
-    
-    CXTabBarViewController *tabBarVC = [[CXTabBarViewController alloc] init];
-    
-    //3.设置控制器为Window的根控制器
-    self.window.rootViewController = tabBarVC;
 
-    CXOauthController *oauthVC = [[CXOauthController alloc] init];
-    self.window.rootViewController = oauthVC;
+    //2.设置控制器为Window的根控制器
+    if([CXAccountTool shareAccountTool].account){
+        // 用户已经授权过
+        CXTabBarViewController *tabBarVC = [[CXTabBarViewController alloc] init];
+        self.window.rootViewController = tabBarVC;
+    }else{
+        // 未授权加载授权页面
+        CXOauthController *oauthVC = [[CXOauthController alloc] init];
+        self.window.rootViewController = oauthVC;
+    }
+    
+    
+    
+    
     // 4.显示出来
     [self.window makeKeyAndVisible];
     
