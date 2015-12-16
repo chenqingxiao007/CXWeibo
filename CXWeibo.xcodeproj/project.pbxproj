@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		747F273AF959882C7B4C7D7E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7428FA0EF650175DEC9AEC6 /* libPods.a */; };
+		95226E761C213AF5006DC853 /* CXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95226E751C213AF5006DC853 /* CXLoginViewController.m */; };
 		9537A6701C1FEA8F006EEF33 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9537A66F1C1FEA8F006EEF33 /* main.m */; };
 		9537A6731C1FEA8F006EEF33 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9537A6721C1FEA8F006EEF33 /* AppDelegate.m */; };
 		9537A67B1C1FEA8F006EEF33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9537A67A1C1FEA8F006EEF33 /* Assets.xcassets */; };
@@ -45,6 +46,8 @@
 /* Begin PBXFileReference section */
 		5685E7CA60E237B822641285 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		66EC25EE28688D690C05EA31 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		95226E741C213AF5006DC853 /* CXLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXLoginViewController.h; sourceTree = "<group>"; };
+		95226E751C213AF5006DC853 /* CXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXLoginViewController.m; sourceTree = "<group>"; };
 		9537A66B1C1FEA8F006EEF33 /* CXWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CXWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9537A66F1C1FEA8F006EEF33 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9537A6711C1FEA8F006EEF33 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -287,6 +290,8 @@
 			children = (
 				9553750F1C205215004C933D /* CXOauthController.h */,
 				955375101C205215004C933D /* CXOauthController.m */,
+				95226E741C213AF5006DC853 /* CXLoginViewController.h */,
+				95226E751C213AF5006DC853 /* CXLoginViewController.m */,
 			);
 			path = Oauth;
 			sourceTree = "<group>";
@@ -477,6 +482,7 @@
 				959712361C20FFF5000AF631 /* UIView+Extension.m in Sources */,
 				955375111C205215004C933D /* CXOauthController.m in Sources */,
 				955374FE1C203C21004C933D /* CXNavigationController.m in Sources */,
+				95226E761C213AF5006DC853 /* CXLoginViewController.m in Sources */,
 				9553750A1C20488B004C933D /* CXPersonalViewController.m in Sources */,
 				955375011C2047DB004C933D /* CXBaseViewController.m in Sources */,
 				955375041C204821004C933D /* CXHomeViewController.m in Sources */,
