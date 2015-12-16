@@ -9,10 +9,18 @@
 #ifndef CXWeibo_Prefix_pch
 #define CXWeibo_Prefix_pch
 
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "UIView+Extension.h"
 
 #define SCREENWIDTH             [UIScreen mainScreen].bounds.size.width
 #define SCREENHEIGHT            [UIScreen mainScreen].bounds.size.height
+
+
+
+
+
+
+
+
+
 
 #endif /* CXWeibo_Prefix_pch */

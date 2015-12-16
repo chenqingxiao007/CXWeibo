@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CXTabBarViewController.h"
+#import "CXOauthController.h"
 
 @interface AppDelegate ()
 
@@ -31,6 +32,8 @@
     //3.设置控制器为Window的根控制器
     self.window.rootViewController = tabBarVC;
 
+    CXOauthController *oauthVC = [[CXOauthController alloc] init];
+    self.window.rootViewController = oauthVC;
     // 4.显示出来
     [self.window makeKeyAndVisible];
     

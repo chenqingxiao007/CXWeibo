@@ -22,6 +22,7 @@
 		9553750A1C20488B004C933D /* CXPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955375091C20488B004C933D /* CXPersonalViewController.m */; };
 		9553750D1C2048B9004C933D /* CXSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9553750C1C2048B9004C933D /* CXSearchViewController.m */; };
 		955375111C205215004C933D /* CXOauthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955375101C205215004C933D /* CXOauthController.m */; };
+		959712361C20FFF5000AF631 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 959712351C20FFF5000AF631 /* UIView+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		9553750C1C2048B9004C933D /* CXSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSearchViewController.m; sourceTree = "<group>"; };
 		9553750F1C205215004C933D /* CXOauthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXOauthController.h; sourceTree = "<group>"; };
 		955375101C205215004C933D /* CXOauthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXOauthController.m; sourceTree = "<group>"; };
+		959712341C20FFF5000AF631 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		959712351C20FFF5000AF631 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		B7428FA0EF650175DEC9AEC6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -225,6 +228,8 @@
 		955374F41C2013F7004C933D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				959712341C20FFF5000AF631 /* UIView+Extension.h */,
+				959712351C20FFF5000AF631 /* UIView+Extension.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -469,6 +474,7 @@
 			files = (
 				955374EE1C2006E2004C933D /* CXTabBarViewController.m in Sources */,
 				9537A6731C1FEA8F006EEF33 /* AppDelegate.m in Sources */,
+				959712361C20FFF5000AF631 /* UIView+Extension.m in Sources */,
 				955375111C205215004C933D /* CXOauthController.m in Sources */,
 				955374FE1C203C21004C933D /* CXNavigationController.m in Sources */,
 				9553750A1C20488B004C933D /* CXPersonalViewController.m in Sources */,
