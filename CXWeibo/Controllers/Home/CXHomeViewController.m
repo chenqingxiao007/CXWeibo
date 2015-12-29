@@ -27,6 +27,7 @@
     
 }
 
+
 - (void)getUserInfo{
 // https://api.weibo.com/2/users/show.json
     
@@ -40,7 +41,7 @@
     [CXNetManager getWithUrl:@"https://api.weibo.com/2/users/show.json" params:params success:^(id responseObject) {
 
         // 设置标题
-        NSString *title = [NSString stringWithFormat:@"%@的微博",[responseObject valueForKey:@"name"]];
+        NSString *title = [NSString stringWithFormat:@"%@",[responseObject valueForKey:@"name"]];
         self.title = title;
         [CXProgressHUD showMessage:[responseObject valueForKey:@"description"] durationTime:1.2 completionBlock:^{
             
