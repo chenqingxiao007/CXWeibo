@@ -20,6 +20,7 @@
 		9537A67E1C1FEA8F006EEF33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9537A67C1C1FEA8F006EEF33 /* LaunchScreen.storyboard */; };
 		9537A6891C1FEA8F006EEF33 /* CXWeiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9537A6881C1FEA8F006EEF33 /* CXWeiboTests.m */; };
 		9537A6941C1FEA8F006EEF33 /* CXWeiboUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9537A6931C1FEA8F006EEF33 /* CXWeiboUITests.m */; };
+		953F21F11C3267C000D50649 /* CXBaseGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 953F21F01C3267C000D50649 /* CXBaseGradientView.m */; };
 		955374EE1C2006E2004C933D /* CXTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955374ED1C2006E2004C933D /* CXTabBarViewController.m */; };
 		955374FE1C203C21004C933D /* CXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955374FD1C203C21004C933D /* CXNavigationController.m */; };
 		955375011C2047DB004C933D /* CXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955375001C2047DB004C933D /* CXBaseViewController.m */; };
@@ -76,6 +77,8 @@
 		9537A68F1C1FEA8F006EEF33 /* CXWeiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CXWeiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9537A6931C1FEA8F006EEF33 /* CXWeiboUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXWeiboUITests.m; sourceTree = "<group>"; };
 		9537A6951C1FEA8F006EEF33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		953F21EF1C3267C000D50649 /* CXBaseGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXBaseGradientView.h; sourceTree = "<group>"; };
+		953F21F01C3267C000D50649 /* CXBaseGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXBaseGradientView.m; sourceTree = "<group>"; };
 		955374EC1C2006E2004C933D /* CXTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CXTabBarViewController.h; path = ../../CXTabBarViewController.h; sourceTree = "<group>"; };
 		955374ED1C2006E2004C933D /* CXTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CXTabBarViewController.m; path = ../../CXTabBarViewController.m; sourceTree = "<group>"; };
 		955374EF1C200B39004C933D /* CXWeibo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CXWeibo-Prefix.pch"; sourceTree = "<group>"; };
@@ -286,6 +289,8 @@
 		955374F41C2013F7004C933D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				953F21EF1C3267C000D50649 /* CXBaseGradientView.h */,
+				953F21F01C3267C000D50649 /* CXBaseGradientView.m */,
 				959712341C20FFF5000AF631 /* UIView+Extension.h */,
 				959712351C20FFF5000AF631 /* UIView+Extension.m */,
 				950CFF881C2288BD001FAC4E /* CXTabBar.h */,
@@ -538,6 +543,7 @@
 				9537A6731C1FEA8F006EEF33 /* AppDelegate.m in Sources */,
 				959712361C20FFF5000AF631 /* UIView+Extension.m in Sources */,
 				955375111C205215004C933D /* CXOauthController.m in Sources */,
+				953F21F11C3267C000D50649 /* CXBaseGradientView.m in Sources */,
 				955374FE1C203C21004C933D /* CXNavigationController.m in Sources */,
 				95226E761C213AF5006DC853 /* CXLoginViewController.m in Sources */,
 				9553750A1C20488B004C933D /* CXPersonalViewController.m in Sources */,

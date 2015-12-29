@@ -13,6 +13,7 @@
 #import "CXProgressHUD.h"
 
 
+
 @interface CXHomeViewController ()
 
 @end
@@ -25,7 +26,6 @@
 //    self.title = @"首页";
     
     [self getUserInfo];
-    
 }
 
 
