@@ -15,16 +15,17 @@
 
 
 @interface CXHomeViewController ()
-
+@property (strong, nonatomic) NSArray *listData;
 @end
 
 @implementation CXHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-//    self.title = @"首页";
+
+    self.title = @"首页";
     
+
     [self getUserInfo];
 }
 
@@ -41,13 +42,10 @@
 
     [CXNetManager getWithUrl:@"https://api.weibo.com/2/statuses/friends_timeline.json" params:params success:^(id responseObject) {
 
-        // 设置标题
-        NSString *title = [NSString stringWithFormat:@"%@",[responseObject valueForKey:@"text"]];
-        self.title = title;
         [CXProgressHUD showMessage:[responseObject valueForKey:@"description"] durationTime:1.2 completionBlock:^{
-            NSString *str =  [[[[responseObject valueForKey:@"statuses"] firstObject] valueForKey:@"retweeted_status"] valueForKey:@"text"];
+            self.listData = [responseObject valueForKey:@"statuses"];
+            [self.tableView reloadData];
             
-            self.title = str;
         } inView:self.view];
         
         
@@ -57,9 +55,34 @@
     }];
     
 }
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
+    return self.listData.count;
+}
 
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
+    
+    
+    static NSString *cellIdentifer = @"reuseCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifer];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifer];
+        cell.textLabel.text = [[self.listData[indexPath.row] valueForKey:@"retweeted_status"] valueForKey:@"text"];
+
+    }
+    
+    return cell;
+ }
 
 
 
