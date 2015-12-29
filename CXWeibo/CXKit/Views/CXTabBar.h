@@ -10,4 +10,6 @@
 
 @interface CXTabBar : UITabBar
 
+- (instancetype)initWithFrame:(CGRect)frame andTabBarNames:(NSArray *)tabBarNames;
+
 @end

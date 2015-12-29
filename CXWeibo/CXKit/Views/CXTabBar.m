@@ -10,12 +10,20 @@
 
 @implementation CXTabBar
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+- (instancetype)initWithFrame:(CGRect)frame andTabBarNames:(NSArray *)tabBarNames{
+    if (self = [super initWithFrame:frame]) {
+        
+        NSMutableArray *items = [[NSMutableArray alloc] init];
+        for (NSString *tabBarName in tabBarNames) {
+            UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:tabBarName image:nil tag:1];
+            
 
+            
+            [items addObject:item];
+        }
+        [self setItems:items];
+        
+    }
+    return self;
+}
 @end

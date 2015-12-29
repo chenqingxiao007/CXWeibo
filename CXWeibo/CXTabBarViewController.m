@@ -12,6 +12,7 @@
 #import "CXMessageViewController.h"
 #import "CXSearchViewController.h"
 #import "CXPersonalViewController.h"
+#import "CXTabBar.h"
 
 @interface CXTabBarViewController ()
 
@@ -33,9 +34,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    
+    CGRect tabBarFrame = self.tabBar.frame;
+    // 删除现有的tabbar
+    [self.tabBar removeFromSuperview];
+    // 添加自定义的tabbar
+    NSArray *names = @[@"首页",@"消息",@"搜索",@"个人"];
+    
+    
+    CXTabBar *customTabbar = [[CXTabBar alloc] initWithFrame:tabBarFrame andTabBarNames:names];
+    [self.view addSubview:customTabbar];
+    
 }
 
+/**
+ *  装配控制器
+ */
 - (void)setupChildViewControllers{
     
     // 1.首页
