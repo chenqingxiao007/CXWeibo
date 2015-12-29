@@ -12,6 +12,7 @@
 #import "CXAccount.h"
 #import "CXProgressHUD.h"
 
+
 @interface CXHomeViewController ()
 
 @end
@@ -38,13 +39,15 @@
                              };
     
 
-    [CXNetManager getWithUrl:@"https://api.weibo.com/2/users/show.json" params:params success:^(id responseObject) {
+    [CXNetManager getWithUrl:@"https://api.weibo.com/2/statuses/friends_timeline.json" params:params success:^(id responseObject) {
 
         // 设置标题
-        NSString *title = [NSString stringWithFormat:@"%@",[responseObject valueForKey:@"name"]];
+        NSString *title = [NSString stringWithFormat:@"%@",[responseObject valueForKey:@"text"]];
         self.title = title;
         [CXProgressHUD showMessage:[responseObject valueForKey:@"description"] durationTime:1.2 completionBlock:^{
+            NSString *str =  [[[[responseObject valueForKey:@"statuses"] firstObject] valueForKey:@"retweeted_status"] valueForKey:@"text"];
             
+            self.title = str;
         } inView:self.view];
         
         
@@ -54,6 +57,12 @@
     }];
     
 }
+
+
+
+
+
+
 
 @end
 
